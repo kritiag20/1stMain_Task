@@ -70,41 +70,9 @@
   border-radius: 4px;
 
 }
-.content-header{
-  position: relative;
-  padding: 20px;
-  height: 140px;
-  border: 2px solid black;
-  /* left: 430px;
-  right: 430px; */
-  
-}
-.closebtn-cont{
-  position: relative;
-  right: 0px;
-  left: 92%;
-}
-.content-main{
-  position: relative;
-  background-color: lightblue;
-  /* height: 40%; */
-  /* position: fixed; */
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 350px;
-  max-height: 800px;
-}
-.main-data{
-  padding: 20px;
-  padding-top: 30px;
-  position: relative;
-  /* height: 100%; */
-  /* overflow-x: hidden;
-  overflow-y: scroll; */
-  /* left: 430px;
-  right: 430px; */
-  /* width: inherit; */
-}
+
+
+
 .content-footer{
   height: 80px;
   /* right: 430px;
@@ -125,6 +93,147 @@ sub{
   font-style: italic;
 }
 
+/******************Modal Header********************/
 
-/* ******************Select Bread Componnet CSS */
+.content-header{
+  position: relative;
+  padding: 20px;
+  height: 140px;
+  border: 2px solid black;
+  /* display: flex; */
+  
+}
+.subName{
+  font-size: 23px;
+  font-weight: 600;
+}
+.closebtn-cont{
+  position: relative;
+  right: 0px;
+  left: 92%;
+}
 
+/* ****************Modal Body ************************* */
+
+.content-main{
+  position: relative;
+  background-color: lightblue;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 350px;
+  max-height: 800px;
+}
+.main-data{
+  padding: 20px;
+  padding-top: 30px;
+  position: relative;
+}
+
+/* ******************Button CSS ***********************/
+
+.group-cont{
+  margin-bottom: 20px;
+}
+.group-heading{
+  color: #282c3f;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0 10px 20px;
+  position: relative;
+}
+.radiobtn{
+  margin: 6px;
+  position: relative;
+  display: inline-block;
+  line-height: 2rem;
+  padding-left: 23px;
+  font-size: 1rem;
+  transition: .28s ease;
+  transform: translateZ(0);
+  width: 17px; 
+  height: 17px;
+}
+.radiobtn::before{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 0;
+  transition: .28s ease;
+  /* border: 1px solid #93959f; */
+  border-radius: 50%;
+}
+.radiobtn:checked::after{
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  color: #60b246;
+  background-color: #60b246;
+  visibility: visible;
+  z-index: 0;
+  transition: .28s ease;
+  border: 1px solid #60b246;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+}
+
+.btnText{
+  outline: none;
+  color: #282c3f;
+  text-transform: capitalize;
+  padding-right: 16px;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 9px;
+  font-size: 17px;
+  line-height: 2.3rem;
+}
+.btnText:hover{
+  font-weight: 500;
+}
+
+.checkmark{
+  position: relative;
+  top: 4px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  margin: 10px;
+  cursor: pointer;
+  transition: .28s ease;
+  transform: translateZ(0);
+}
+.checkmark:checked:before{
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #60b246;
+  z-index: 0;
+  transition: .28s ease;
+  border: 1px solid #93959f;
+}
+.checkmark:checked::after {
+  content: "";
+  position: absolute;
+  background-color: #60b246;
+  z-index: 0;
+  border: 1px solid #60b246;
+  left: 6px;
+  bottom: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0px 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.Option:checked ~ .checkmark::after {
+  background-color: green;
+}
+.errMsg{
+  color: brown;
+}

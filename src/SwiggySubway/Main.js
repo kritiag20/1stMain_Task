@@ -10,10 +10,10 @@ export class Main extends Component {
         return (
             <div>
                 <SelectBread />
-                <FreeCondimentsAny3 />
-                <PaidAddsOn />
-                <NoUpperLimit />
                 <FreeAddsOn />
+                <NoUpperLimit />
+                <PaidAddsOn />
+                <FreeCondimentsAny3 />
             </div>
         )
     }

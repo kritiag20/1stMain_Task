@@ -59,12 +59,12 @@ export class PaidAddsOn extends Component {
             }
 
             if (options.name === e.target.value && e.target.checked === true) {
-                NewAmt =  this.state.TotalAmt + options.price
+                NewAmt = this.state.TotalAmt + options.price
                 this.setState({ TotalAmt: NewAmt })
                 console.log(NewAmt);
             }
             else if (options.name === e.target.value && e.target.checked === false) {
-                NewAmt =  this.state.TotalAmt - options.price
+                NewAmt = this.state.TotalAmt - options.price
                 this.setState({ TotalAmt: NewAmt })
                 console.log(this.state.TotalAmt);
             }
@@ -81,53 +81,30 @@ export class PaidAddsOn extends Component {
 
         for (let [key, value] of Object.entries(AddOnItem)) {
             AddOnOption.push(
-                <div>
-                    <input type="checkbox"
+                <div className="Option">
+                    <input className="checkmark" type="checkbox"
                         key={key} name="addOn"
                         value={value.name}
                         checked={value.isChecked}
-                        onChange={(e) => this.checkChange(e)} /> {value.name}
-
-                    <sub>&#8377;{value.price}</sub>
+                        onChange={(e) => this.checkChange(e)} />
+                    <span className="btnText">
+                        {value.name}
+                        <sub>&#8377;{value.price}</sub>
+                    </span>
                 </div>
 
             )
         }
 
         return (
-            <div>
-                <label htmlFor="AddOn">Adds On (optional)</label>
+            <div className="group-cont">
+                <div className="group-heading">
+                    <label htmlFor="AddOn">Adds On (optional)</label>
+                </div>
                 <div>
                     {AddOnOption}
-                    {/* <div>
-                        <input type="checkbox" name="sauce" value="VegProtein"
-                            checked={this.state.VegProtein} onChange={this.checkChange} /> VegProtein
-
-                        <sub>&#8377;{this.state.VegProtPrice}</sub>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="sauce" value="CheeseSlice"
-                            checked={this.state.CheeseSlice} onChange={this.checkChange} /> Cheese Slice
-
-                        <sub>&#8377;{this.state.CheeseSlicePrice}</sub>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="sauce" value="MozzarellaCheese"
-                            checked={this.state.MozzarellaCheese} onChange={this.checkChange} /> Mozzarella Cheese
-
-                        <sub>&#8377;{this.state.MozzCheesePrice}</sub>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="sauce" value="Egg"
-                            checked={this.state.Egg} onChange={this.checkChange} /> Egg
-
-                        <sub>&#8377;{this.state.EggPrice}</sub>
-                    </div> */}
-
                 </div>
-                <div>
-                    Total Amount :  &#8377;{this.state.TotalAmt}
-                </div>
+               
             </div>
         )
     }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Main from './Main'
 
+
+
 export class Modal extends Component {
 
     constructor(props) {
@@ -36,6 +38,9 @@ export class Modal extends Component {
                         <div className="content">
 
                             <div className="content-header">
+                                <div className="subName">
+                                    Customize "BFF veg sub combo(15 cm, 6 Inch)"
+                                </div>
                                 <span className="closebtn-cont">
                                     <button className="closebtn" onClick={this.closeModal}>Close</button>
                                 </span>
@@ -48,7 +53,7 @@ export class Modal extends Component {
                             </div>
 
                             <div className="content-footer">
-                                hello Im footer
+                                Total Amount :  &#8377;{this.state.TotalAmt}
                             </div>
 
                         </div>

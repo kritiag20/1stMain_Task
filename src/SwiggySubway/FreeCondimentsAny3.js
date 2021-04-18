@@ -44,17 +44,17 @@ export class FreeCondimentsAny3 extends Component {
 
         this.state = {
 
-        //     Mayonnaise: false,
-        //     MintMayonnaise: false,
-        //     ChipotleSouthwest: false,
-        //     RedChilli: false,
-        //     Barbeque: false,
-        //     TandooriMayo: false,
-        //     SweetOnion: false,
-        //     count: 0,
+            //     Mayonnaise: false,
+            //     MintMayonnaise: false,
+            //     ChipotleSouthwest: false,
+            //     RedChilli: false,
+            //     Barbeque: false,
+            //     TandooriMayo: false,
+            //     SweetOnion: false,
+            //     count: 0,
             errMsg: '',
 
-        //     Sauce: ["Mayonnaise", "MintMayonnaise", "ChipotleSouthwest", "RedChilli", "Barbeque", "TandooriMayo", "SweetOnion"]
+            //     Sauce: ["Mayonnaise", "MintMayonnaise", "ChipotleSouthwest", "RedChilli", "Barbeque", "TandooriMayo", "SweetOnion"]
         }
         this.checkChange = this.checkChange.bind(this)
     }
@@ -78,8 +78,12 @@ export class FreeCondimentsAny3 extends Component {
             }
             if (count > 3) {
                 sauces.isChecked = !e.target.checked
-                this.setState({errMsg: "You can select maximum of 3 choice of Sauce"})
+                this.setState({ errMsg: "You can select maximum of 3 choice of Sauce" })
                 console.log("more than 3 selected");
+            }
+            else
+            {
+                this.setState({ errMsg: "" })
             }
         })
         this.setState({ sauce: allSauce })
@@ -114,70 +118,79 @@ export class FreeCondimentsAny3 extends Component {
 
         for (let [key, value] of Object.entries(sauce)) {
             sauces.push(
-                <div>
-                    <input key={key}
+                <div className="Option">
+                    <input className="checkmark" key={key}
                         type="checkbox"
                         value={value.name}
                         checked={value.isChecked}
                         onChange={(e) => this.checkChange(e)}
                     />
-                    {value.name}
+                    <span className="btnText">
+                        {value.name}
+
+                    </span>
                 </div>
             )
         }
 
         return (
             <div>
-                <label htmlFor="Sauce">Choices of Sauce Any (3)</label>
-                <div>
-                    {sauces}
-                </div>
-                <div>
-                    {this.state.errMsg}
-                </div>
-                {/* <div>
-                        <input type="checkbox" name="selectSauce" value={this.state.Sauce[0]}
-                            checked={this.state.Mayonnaise} onChange={() => this.checkChange()} /> Mayonnaise
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="MintMayonnaise"
-                            checked={this.state.MintMayonnaise} onChange={this.checkChange} /> Mint Mayonnaise
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="ChipotleSouthwest"
-                            checked={this.state.ChipotleSouthwest} onChange={this.checkChange} /> Chipotle South west
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="RedChilli"
-                            checked={this.state.RedChilli} onChange={this.checkChange} /> Red Chilli
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="Barbeque"
-                            checked={this.state.Barbeque} onChange={this.checkChange} /> Barbeque
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="TandooriMayo"
-                            checked={this.state.TandooriMayo} onChange={this.checkChange} /> Tandoori Mayo
-                    </div>
-                    <div>
-                        <input type="checkbox" name="selectSauce" value="SweetOnion"
-                            checked={this.state.SweetOnion} onChange={this.checkChange} /> Sweet Onion
-                    </div> */}
+                <div className="group-cont">
 
-                {/* <div>
-                    Mayonnaise : {this.state.Mayonnaise.toString()}<br></br>
-                    MintMayonnaise: {this.state.MintMayonnaise.toString()}<br />
-                    ChipotleSouthwest: {this.state.ChipotleSouthwest.toString()}<br />
-                    RedChilli: {this.state.RedChilli.toString()}<br />
-                    Barbeque: {this.state.Barbeque.toString()}<br />
-                    TandooriMayo: {this.state.TandooriMayo.toString()}<br />
-                    SweetOnion: {this.state.SweetOnion.toString()}<br />
-                    Count = {this.state.count}<br />
-                    Err Msg : {this.state.errMsg}
-                </div> */}
+                    <div className="group-heading">
+                        <label>Choices of Sauce Any (3)</label>
+
+                    </div>
+                    <div className="Options">
+                        {sauces}
+                    </div>
+                    <div className="errMsg">
+                        {this.state.errMsg}
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
 export default FreeCondimentsAny3
+{/* <div>
+        <input type="checkbox" name="selectSauce" value={this.state.Sauce[0]}
+            checked={this.state.Mayonnaise} onChange={() => this.checkChange()} /> Mayonnaise
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="MintMayonnaise"
+            checked={this.state.MintMayonnaise} onChange={this.checkChange} /> Mint Mayonnaise
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="ChipotleSouthwest"
+            checked={this.state.ChipotleSouthwest} onChange={this.checkChange} /> Chipotle South west
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="RedChilli"
+            checked={this.state.RedChilli} onChange={this.checkChange} /> Red Chilli
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="Barbeque"
+            checked={this.state.Barbeque} onChange={this.checkChange} /> Barbeque
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="TandooriMayo"
+            checked={this.state.TandooriMayo} onChange={this.checkChange} /> Tandoori Mayo
+    </div>
+    <div>
+        <input type="checkbox" name="selectSauce" value="SweetOnion"
+            checked={this.state.SweetOnion} onChange={this.checkChange} /> Sweet Onion
+    </div> */}
+
+{/* <div>
+    Mayonnaise : {this.state.Mayonnaise.toString()}<br></br>
+    MintMayonnaise: {this.state.MintMayonnaise.toString()}<br />
+    ChipotleSouthwest: {this.state.ChipotleSouthwest.toString()}<br />
+    RedChilli: {this.state.RedChilli.toString()}<br />
+    Barbeque: {this.state.Barbeque.toString()}<br />
+    TandooriMayo: {this.state.TandooriMayo.toString()}<br />
+    SweetOnion: {this.state.SweetOnion.toString()}<br />
+    Count = {this.state.count}<br />
+    Err Msg : {this.state.errMsg}
+</div> */}

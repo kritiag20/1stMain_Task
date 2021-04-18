@@ -53,18 +53,6 @@ export class NoUpperLimit extends Component {
     constructor(props) {
         super(props)
 
-        // this.state = {
-        //     "Lettuce": false,
-        //     "Tomato": false,
-        //     "Cucumber": false,
-        //     "Capsicum": false,
-        //     "Olives": false,
-        //     "Onions": false,
-        //     "Pickle": false,
-        //     "Jalapenos": false,
-        //     "SaltAndPepper": false
-
-        // }
         this.checkChange = this.checkChange.bind(this)
     }
 
@@ -87,65 +75,29 @@ export class NoUpperLimit extends Component {
 
         for (let [key, value] of Object.entries(Vegetable)) {
             Vege.push(
-                <div>
-                    <input type="checkbox"
+                <div className="Option">
+                    <input className="checkmark" type="checkbox"
                         key={key}
                         name="veges"
                         value={value.name}
                         checked={value.isChecked}
-                        onChange={(e) => this.checkChange(e)} /> {value.name}
+                        onChange={(e) => this.checkChange(e)} />
+                    <span className="btnText">
+                        {value.name}
+                    </span>
+
                 </div>
             )
         }
 
         return (
-            <div>
-                <label htmlFor="Vegetable">Choices of Vegetables <sub>(optional)</sub></label>
+            <div className="group-cont">
+                <div className="group-heading">
+                    <label htmlFor="Vegetable">Choices of Vegetables <sub>(optional)</sub></label>
+                </div>
                 <div>
                     {Vege}
-                    {/* {this.state.vegetable.map((veg) => ( */}
-                    {/* <div>
-                            <input type="checkbox" value="Lettuce"
-                                checked={this.state.Lettuce} onChange={this.checkChange} /> Lettuce
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Tomato"
-                                checked={this.state.Tomato} onChange={this.checkChange} /> Tomato
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Cucumber"
-                                checked={this.state.Cucumber} onChange={this.checkChange} /> Cucumber
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Capsicum"
-                                checked={this.state.Capsicum} onChange={this.checkChange} /> Capsicum
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Olives"
-                                checked={this.state.Olives} onChange={this.checkChange} /> Olives
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Onions"
-                                checked={this.state.Onions} onChange={this.checkChange} /> Onions
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Pickle"
-                                checked={this.state.Pickle} onChange={this.checkChange} /> Pickle
-                        </div>
-                        <div>
-                            <input type="checkbox" value="Jalapenos"
-                                checked={this.state.Jalapenos} onChange={this.checkChange} /> Jalapenos
-                        </div>
-                        <div>
-                            <input type="checkbox" value="SaltAndPepper"
-                                checked={this.state.SaltAndPepper} onChange={this.checkChange} /> Salt And Pepper
-                        </div> */}
-                    {/* ))} */}
-
                 </div>
-                {/* <div>
-                    {this.state.Lettuce.toString()}
-                </div> */}
             </div>
         )
     }

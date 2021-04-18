@@ -59,28 +59,30 @@ export class SelectBread extends Component {
         for (let [key, value] of Object.entries(Bread)) {
             Breads.push(
                 <div>
-                    <input type="radio"
+                    <input className="radiobtn" type="radio"
                         key={key}
                         name="bread"
                         onChange={(e) => this.handleChange(e)}
                         value={value.name}
-                    // checked={value.isChecked}
                     />
+                    <span className="btnText">
+                        {value.name}
 
-                    {value.name}
+                    </span>
                 </div>
             )
         }
 
         return (
             <div>
-                <div className="customize-cont">
-                    <div className="cont-bread">
+                <div className="group-cont">
 
-                        <label htmlFor="bread">Choice of  Bread</label>
-                        <div className="breadOption">
-                            {Breads}
-                        </div>
+                    <div className="group-heading">
+                        <label>Choice of  Bread</label>
+                    </div>
+
+                    <div className="Option">
+                        {Breads}
                     </div>
                 </div>
             </div>
