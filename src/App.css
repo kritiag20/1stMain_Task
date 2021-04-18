@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,96 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.modal{
+  position: fixed;
+  border: 2px solid brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  background-Color: rgba(0, 0, 0, 0.40);
 }
+/* .backOverlay{
+  position: absolute;
+} */
+.content-container{
+  top: 80px;
+  bottom: 100px;
+  position: fixed;  
+  border: 1px solid #ccc;
+  background: #fff;
+  /* padding: 20px; */
+}
+.content{
+  width: 665px;
+  position: relative;
+  border: 1px solid red;
+  background: #fff;
+  border-radius: 4px;
+
+}
+.content-header{
+  position: relative;
+  padding: 20px;
+  height: 140px;
+  border: 2px solid black;
+  /* left: 430px;
+  right: 430px; */
+  
+}
+.closebtn-cont{
+  position: relative;
+  right: 0px;
+  left: 92%;
+}
+.content-main{
+  position: relative;
+  background-color: lightblue;
+  /* height: 40%; */
+  /* position: fixed; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 350px;
+  max-height: 800px;
+}
+.main-data{
+  padding: 20px;
+  padding-top: 30px;
+  position: relative;
+  /* height: 100%; */
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
+  /* left: 430px;
+  right: 430px; */
+  /* width: inherit; */
+}
+.content-footer{
+  height: 80px;
+  /* right: 430px;
+  left: 430px; */
+  /* bottom: 100px; */
+  border: 2px solid black;
+  position: relative;
+}
+/* .closebtn{
+  width: 30px;
+  height: 30px;
+} */
+
+sub{
+  color: #778899;
+  margin-left: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+
+/* ******************Select Bread Componnet CSS */
+
