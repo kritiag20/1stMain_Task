@@ -8,17 +8,17 @@ const sauce = [
     },
     {
         id: 2,
-        name: "MintMayonnaise",
+        name: "Mint Mayonnaise",
         isChecked: false
     },
     {
         id: 3,
-        name: "ChipotleSouthwest",
+        name: "Chipotle South west",
         isChecked: false
     },
     {
         id: 4,
-        name: "RedChilli",
+        name: "Red Chilli",
         isChecked: false
     },
     {
@@ -28,12 +28,12 @@ const sauce = [
     },
     {
         id: 6,
-        name: "TandooriMayo",
+        name: "Tandoori Mayo",
         isChecked: false
     },
     {
         id: 7,
-        name: "SweetOnion",
+        name: "Sweet Onion",
         isChecked: false
     }
 ]
@@ -81,8 +81,7 @@ export class FreeCondimentsAny3 extends Component {
                 this.setState({ errMsg: "You can select maximum of 3 choice of Sauce" })
                 console.log("more than 3 selected");
             }
-            else
-            {
+            else {
                 this.setState({ errMsg: "" })
             }
         })
@@ -119,6 +118,11 @@ export class FreeCondimentsAny3 extends Component {
         for (let [key, value] of Object.entries(sauce)) {
             sauces.push(
                 <div className="Option">
+                    <span className="vegSymbol">
+                        <div className="vegIconsqu">
+                            <div className="vegIconCircle"></div>
+                        </div>
+                    </span>
                     <input className="checkmark" key={key}
                         type="checkbox"
                         value={value.name}
@@ -138,7 +142,7 @@ export class FreeCondimentsAny3 extends Component {
                 <div className="group-cont">
 
                     <div className="group-heading">
-                        <label>Choices of Sauce Any (3)</label>
+                        <label>Choice of Sauce Any (3)</label>
 
                     </div>
                     <div className="Options">

@@ -3,28 +3,28 @@ import React, { Component } from 'react'
 const AddOnItem = [
     {
         id: 1,
-        name: "VegProtein",
+        name: "Veg Protein",
         price: 48,
         isChecked: false
     },
     {
         id: 2,
-        name: "CheeseSlice",
+        name: "Cheese Slice",
         price: 15,
         isChecked: false
     },
     {
         id: 3,
-        name: "MozzarellaCheese",
+        name: "Mozzarella Cheese",
         price: 15,
         isChecked: false
-    },
-    {
-        id: 4,
-        name: "Egg",
-        price: 39,
-        isChecked: false
-    },
+    }
+    // {
+    //     id: 4,
+    //     name: "Egg",
+    //     price: 39,
+    //     isChecked: false
+    // },
 ]
 
 export class PaidAddsOn extends Component {
@@ -33,23 +33,15 @@ export class PaidAddsOn extends Component {
         super(props)
 
         this.state = {
-            // VegProtein: false,
-            // CheeseSlice: false,
-            // MozzarellaCheese: false,
-            // Egg: false,
-            TotalAmt: 277,
-            // VegProtPrice: 48,
-            // CheeseSlicePrice: 15,
-            // MozzCheesePrice: 15,
-            // EggPrice: 39
+            TotalAmt: 352
         }
         this.checkChange = this.checkChange.bind(this)
     }
 
     checkChange = (e) => {
-        // const Amt = this.state.TotalAmt
+
         console.log(e.target.value + " " + e.target.checked.toString());
-        // this.setState({ [e.target.value]: e.target.checked })
+
         let NewAmt = 0
         let AddOn = AddOnItem;
 
@@ -71,7 +63,7 @@ export class PaidAddsOn extends Component {
         })
         this.setState({ AddOnItem: AddOn })
         console.log("After" + this.state.TotalAmt);
-
+        this.props.Amount(NewAmt)
     }
 
 
@@ -82,6 +74,11 @@ export class PaidAddsOn extends Component {
         for (let [key, value] of Object.entries(AddOnItem)) {
             AddOnOption.push(
                 <div className="Option">
+                    <span className="vegSymbol">
+                        <div className="vegIconsqu">
+                            <div className="vegIconCircle"></div>
+                        </div>
+                    </span>
                     <input className="checkmark" type="checkbox"
                         key={key} name="addOn"
                         value={value.name}
@@ -89,7 +86,7 @@ export class PaidAddsOn extends Component {
                         onChange={(e) => this.checkChange(e)} />
                     <span className="btnText">
                         {value.name}
-                        <sub>&#8377;{value.price}</sub>
+                        <span className="optional">&#8377;{value.price}</span>
                     </span>
                 </div>
 
@@ -99,12 +96,11 @@ export class PaidAddsOn extends Component {
         return (
             <div className="group-cont">
                 <div className="group-heading">
-                    <label htmlFor="AddOn">Adds On (optional)</label>
+                    <label htmlFor="AddOn">Adds On <span className="optional">(optional)</span></label>
                 </div>
                 <div>
                     {AddOnOption}
                 </div>
-               
             </div>
         )
     }

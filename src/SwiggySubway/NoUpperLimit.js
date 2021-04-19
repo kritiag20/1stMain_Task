@@ -43,7 +43,7 @@ const Vegetable = [
     },
     {
         id: 9,
-        name: "SaltAndPepper",
+        name: "Salt AndPepper",
         isChecked: false
     }
 ]
@@ -76,6 +76,11 @@ export class NoUpperLimit extends Component {
         for (let [key, value] of Object.entries(Vegetable)) {
             Vege.push(
                 <div className="Option">
+                    <span className="vegSymbol">
+                        <div className="vegIconsqu">
+                            <div className="vegIconCircle"></div>
+                        </div>
+                    </span>
                     <input className="checkmark" type="checkbox"
                         key={key}
                         name="veges"
@@ -93,7 +98,7 @@ export class NoUpperLimit extends Component {
         return (
             <div className="group-cont">
                 <div className="group-heading">
-                    <label htmlFor="Vegetable">Choices of Vegetables <sub>(optional)</sub></label>
+                    <label htmlFor="Vegetable">Choice of Vegetables <span className="optional">(optional)</span></label>
                 </div>
                 <div>
                     {Vege}

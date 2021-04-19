@@ -50,7 +50,12 @@ export class FreeAddsOn extends Component {
 
         for (let [key, value] of Object.entries(BreadPreparation)) {
             Preparation.push(
-                <div>
+                <div className="Option">
+                    <span className="vegSymbol">
+                        <div className="vegIconsqu">
+                            <div className="vegIconCircle"></div>
+                        </div>
+                    </span>
                     <input className="radiobtn" type="radio"
                         id={key}
                         name="bread"
