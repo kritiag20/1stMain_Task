@@ -1,44 +1,97 @@
-/* .App {
-  text-align: center;
+.App {
+  font-family: ProximaNova,Arial,Helvetica Neue,sans-serif;
+  text-transform: capitalize;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  width: 100%; 
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper{
+  background-color: rgb(17, 141, 81);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subway{
+  padding: 50px;
+  height: 20%;
+  width: 600px;
+  margin: auto;
+}
+.subwayHeading{
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+.tagline{
+  position: relative;
+  top: 20px;
+  color: #E5E7EB;
+  width: 100%;
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+}
+.subway-menu{
+  height: 80%;
+  width: 600px;
+  margin: auto;
+  /* padding: 50px 50px; */
+}
+.menu-heading{
+  margin: 0;
+  padding: 26px 0 32px;
+  font-size: 32px;
+  letter-spacing: -.3px;
+  font-weight: 600;
+  color: #282c3f;
+}
+.menu-item{
+  border: 2px solid black;
+  width: 500px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 20px;
+}
+.menu-item-detail{
+  width: 70%;
+  position: relative;
+}
+.menu-item-image{
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-items: flex-start;
+}
+.vegSymb{
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  /* padding-bottom: 10px; */
+}
+.subway-name{
+  font-size: 1.10rem;
+  font-weight: 600;
+  color: #282c3f;
+  margin: 10px 0;
+}
+.price{
+  font-size: 1rem;
+  margin-right: 8px;
+  color: #282c3f;
+}
+.subway-offer{
+  margin-top: 8px;
+  color: #686b78;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+/* ******************** Modal ********************** */
 .modal{
   position: fixed;
-  border: 2px solid brown;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,47 +104,23 @@
   max-height: 100%;
   background-Color: rgba(0, 0, 0, 0.40);
 }
-/* .backOverlay{
-  position: absolute;
-} */
+
 .content-container{
   top: 80px;
   bottom: 100px;
   position: fixed;  
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   background: #fff;
-  /* padding: 20px; */
+  border-radius: 10px;
 }
 .content{
   width: 665px;
   position: relative;
-  border: 1px solid red;
-  background: #fff;
-  border-radius: 4px;
-
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-
-
-.content-footer{
-  height: 80px;
-  /* right: 430px;
-  left: 430px; */
-  /* bottom: 100px; */
-  border: 2px solid black;
-  position: relative;
-}
-/* .closebtn{
-  width: 30px;
-  height: 30px;
-} */
-
-sub{
-  color: #778899;
-  margin-left: 10px;
-  font-size: 14px;
-  font-style: italic;
-}
 
 /******************Modal Header********************/
 
@@ -99,34 +128,127 @@ sub{
   position: relative;
   padding: 20px;
   height: 140px;
-  border: 2px solid black;
-  /* display: flex; */
-  
+  box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+}
+.topHeading{
+  margin-bottom: 25px;
+}
+.subName-heading{
+  display: flex;
+  height: 30px;
+background-color: #fff;
 }
 .subName{
-  font-size: 23px;
+  position: relative;
+  color: #282c3f;
+  width: 95%;
   font-weight: 600;
+  font-size: 22px;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-transform: capitalize;
+  padding-left: 10px;
+  /* display: flex; */
+}
+.amt{
+ padding-left: 25px;
+ color: #778899;
 }
 .closebtn-cont{
   position: relative;
-  right: 0px;
-  left: 92%;
+  width: 10%;
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-start;
+}
+.closebtn{
+  width: 34px; 
+  height: 38px;
+  display: contents;
+  align-items: flex-start;
+  justify-items: flex-end;
+}
+.closeBtn{
+  color: #4B5563;
+  width: 25px;
+  height: 25px;
+}
+hr{
+  border: 1px dashed lightgray;
+    border-spacing: 29px;
+    margin-left: 10px;
+}
+.heading-group{
+  padding: 5px 10px 7px 25px;
+  color: #93959f;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+}
+.subheading{
+  display: inline-table;
+  position: relative;
+  margin-bottom: 5px;
+}
+.subheading:hover{
+  color: #282c3f;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.dot{
+  font-size: 20px;
+  margin-right: 8px;
 }
 
 /* ****************Modal Body ************************* */
 
 .content-main{
   position: relative;
-  background-color: lightblue;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 350px;
-  max-height: 800px;
+  height: 355px;
+/* background-color: #fff; */
+
 }
 .main-data{
   padding: 20px;
   padding-top: 30px;
   position: relative;
+}
+
+/* *********************Modal Footer************************ */
+
+.content-footer{
+  height: 45px;
+  position: relative;
+  padding: 20px;
+  box-shadow:0 4px 6px 4px rgba(0, 0, 0, 0.1), 0 2px 4px 5px rgba(0, 0, 0, 0.06);
+
+}
+.amount{
+  background-color: #60b246;
+  position: relative;
+  display: flex;
+  padding: 11px 16px;
+  justify-content: space-between;
+}
+.totalAmt{
+  /* height: 20px; */
+  
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.addItem{
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* ******************Button CSS ***********************/
@@ -138,8 +260,9 @@ sub{
   color: #282c3f;
   font-size: 20px;
   font-weight: 600;
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 10px 25px;
   position: relative;
+  letter-spacing: 1px;
 }
 .radiobtn{
   margin: 6px;
@@ -234,6 +357,38 @@ sub{
 .Option:checked ~ .checkmark::after {
   background-color: green;
 }
+.optional{
+  color: #778899;
+  margin-left: 5px;
+  font-size: 14px;
+}
 .errMsg{
   color: brown;
+  font-style: italic;
+}
+.Option{
+  display: block;
+}
+.vegSymbol{
+  bottom: 8px;
+  position: relative;
+  display: inline-flex;
+}
+.vegIconsqu{
+  margin-right: 5px;
+  top: 5px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #60b246;
+}
+.vegIconCircle{
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #60b246;
 }
