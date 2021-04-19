@@ -19,12 +19,6 @@ const AddOnItem = [
         price: 15,
         isChecked: false
     }
-    // {
-    //     id: 4,
-    //     name: "Egg",
-    //     price: 39,
-    //     isChecked: false
-    // },
 ]
 
 export class PaidAddsOn extends Component {

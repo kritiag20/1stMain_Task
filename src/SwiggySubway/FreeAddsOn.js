@@ -60,7 +60,6 @@ export class FreeAddsOn extends Component {
                         name="bread"
                         onChange={(e) => this.handleChange(e)}
                         value={value.value}
-                    // checked={this.state.BreadPrep === value.value}
                     />
                     <span className="btnText">
                         <label htmlFor={value.value}>{value.value}</label>

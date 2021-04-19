@@ -34,11 +34,9 @@ export class SelectBread extends Component {
         super(props)
 
         this.handleChange = this.handleChange.bind(this)
-        // this.submit = this.submit.bind(this)
     }
 
     handleChange = (e) => {
-        // this.setState({ bread: e.target.value })
         console.log(e.target.value);
         let allBread = Bread;
 

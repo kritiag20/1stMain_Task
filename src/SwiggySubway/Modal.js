@@ -30,8 +30,6 @@ export class Modal extends Component {
     }
     closeModal = () => {
         this.setState({ isOpen: false })
-
-        // this.props.closeModal()
     }
 
     render() {

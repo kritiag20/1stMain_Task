@@ -43,26 +43,12 @@ export class FreeCondimentsAny3 extends Component {
         super(props)
 
         this.state = {
-
-            //     Mayonnaise: false,
-            //     MintMayonnaise: false,
-            //     ChipotleSouthwest: false,
-            //     RedChilli: false,
-            //     Barbeque: false,
-            //     TandooriMayo: false,
-            //     SweetOnion: false,
-            //     count: 0,
-            errMsg: '',
-
-            //     Sauce: ["Mayonnaise", "MintMayonnaise", "ChipotleSouthwest", "RedChilli", "Barbeque", "TandooriMayo", "SweetOnion"]
+            errMsg: ''
         }
         this.checkChange = this.checkChange.bind(this)
     }
 
     checkChange = (e) => {
-
-        // console.log(sauce.length);
-        console.log(e.target.value);
         let count = 0;
         let allSauce = sauce;
 
@@ -70,11 +56,9 @@ export class FreeCondimentsAny3 extends Component {
             if (sauces.name === e.target.value) {
                 sauces.isChecked = e.target.checked
             }
-            // console.log(sauces.isChecked);
             if (sauces.isChecked === true) {
                 count = count + 1
                 console.log("count " + count);
-                // console.log("more than 3 selected");
             }
             if (count > 3) {
                 sauces.isChecked = !e.target.checked
@@ -86,29 +70,6 @@ export class FreeCondimentsAny3 extends Component {
             }
         })
         this.setState({ sauce: allSauce })
-
-
-        // let c = 0;
-        // console.log(this.state.Sauce[0]);
-        // // console.log(e.target.value + " " + e.target.checked);
-        // this.setState({ [e.target.value]: e.target.checked })
-
-        // console.log("count Before " + this.state.count);
-
-        // for (c = 0; c <= 7; c++) {
-
-        //     if (e.target.checked === true) {
-
-        //         this.setState({ count: this.state.count + 1 })
-        //         console.log("Count After " + this.state.count);
-        //     }
-        // }
-
-        // if (this.state.count > 2) {
-        //     console.log("more than 3 selected");
-        //     this.setState({ errMsg: "You can select maximum 3 choices of Sauce" })
-        //     return false
-        // }
     }
 
     render() {
