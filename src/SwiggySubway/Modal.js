@@ -5,18 +5,19 @@ import PaidAddsOn from './PaidAddsOn';
 import SelectBread from './SelectBread';
 import FreeAddsOn from './FreeAddsOn'
 
+
 export class Modal extends Component {
 
     constructor(props) {
         super(props)
-
+        // const product = this.props.name
         this.state = {
+            prodName :this.props.name,
             isOpen: false,
-            TotalAmt: "352"
+            TotalAmt: this.props.price
         }
-        this.openModal = this.openModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
-        this.handleAmount = this.handleAmount(this)
+        this.handleAmount = this.handleAmount.bind(this)
     }
 
     handleAmount = (amount) => {
@@ -24,22 +25,22 @@ export class Modal extends Component {
         console.log("hello " + amount);
     }
 
-    openModal() {
-        this.setState({ isOpen: true })
-    }
-    closeModal() {
-        this.setState({ isOpen: !this.state.isOpen })
+    // openModal() {
+    //     this.setState({ isOpen: true })
+    // }
+    closeModal = () => {
+        this.props.closeModal()
     }
 
     render() {
 
         return (
             <div>
-                <div>
-                    <button onClick={this.openModal}>Open Me</button>
-                </div>
+                {/* <div>
+                    <button className="addBtn" onClick={this.openModal}>ADD + </button>
+                </div> */}
 
-                {this.state.isOpen && (
+                {/* {this.state.isOpen && ( */}
 
                     <div class="modal">
                         <div className="content-container">
@@ -55,11 +56,11 @@ export class Modal extends Component {
                                                 </div>
                                             </span>
                                             <div className="subName">
-                                                Customize "BFF veg sub combo (15 cm, 6 Inch)"
+                                                {`customize ${this.state.prodName}`}
                                             </div>
 
                                             <span className="closebtn-cont">
-                                                <div className="closebtn" onClick={() => this.closeModal()}>
+                                                <div className="closebtn" onClick={this.closeModal}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" class="closeBtn" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                                     </svg>
@@ -67,7 +68,7 @@ export class Modal extends Component {
                                             </span>
                                         </div>
                                         <div className="amt">
-                                            &#8377;{this.state.TotalAmt}.00
+                                            &#8377;{this.state.TotalAmt}
                                         </div>
                                     </div>
                                     <hr />
@@ -85,7 +86,7 @@ export class Modal extends Component {
                                         <SelectBread />
                                         <FreeAddsOn />
                                         <NoUpperLimit />
-                                        <PaidAddsOn Amount={() => this.handleAmount()} />
+                                        <PaidAddsOn amount={this.handleAmount} price={this.state.TotalAmt} />
                                         <FreeCondimentsAny3 />
                                     </div>
                                 </div>
@@ -93,7 +94,7 @@ export class Modal extends Component {
                                 <div className="content-footer">
                                     <div className="amount">
                                         <div className="totalAmt">
-                                            Total &#8377;{this.state.TotalAmt}.00
+                                            Total &#8377;{`${this.state.TotalAmt}.00`}
                                         </div>
                                         <div className="addItem">
                                             ADD ITEM
@@ -105,7 +106,7 @@ export class Modal extends Component {
                         </div>
 
                     </div>
-                )}
+                {/* )} */}
 
             </div>
         )

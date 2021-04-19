@@ -33,13 +33,13 @@ export class PaidAddsOn extends Component {
         super(props)
 
         this.state = {
-            TotalAmt: 352
+            TotalAmt: this.props.price
         }
         this.checkChange = this.checkChange.bind(this)
     }
 
     checkChange = (e) => {
-
+        console.log((JSON.stringify(this.props)));
         console.log(e.target.value + " " + e.target.checked.toString());
 
         let NewAmt = 0
@@ -63,7 +63,8 @@ export class PaidAddsOn extends Component {
         })
         this.setState({ AddOnItem: AddOn })
         console.log("After" + this.state.TotalAmt);
-        this.props.Amount(NewAmt)
+        this.props.amount(NewAmt)
+        
     }
 
 
