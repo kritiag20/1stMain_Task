@@ -36,7 +36,6 @@
   height: 80%;
   width: 600px;
   margin: auto;
-  /* padding: 50px 50px; */
 }
 .menu-heading{
   margin: 0;
@@ -47,7 +46,6 @@
   color: #282c3f;
 }
 .menu-item{
-  /* border: 2px solid black;s */
   width: 500px;
   display: flex;
   -webkit-box-pack: justify;
@@ -67,7 +65,6 @@
   position: relative;
   display: block;
   margin-bottom: 5px;
-  /* padding-bottom: 10px; */
 }
 .subway-name{
   font-size: 1.1rem;
@@ -111,7 +108,6 @@
   border: none;
   color: #60b246;
   background-color: #fff;
-  /* padding: 10px; */
 }
 
 .hr{
@@ -119,7 +115,6 @@
   width: 31rem;
   margin-top: -5px;
   margin-bottom: 15px;
-  /* margin-left: 5px; */
 }
 
 /* ******************** Modal ********************** */
@@ -266,8 +261,6 @@ hr{
   justify-content: space-between;
 }
 .totalAmt{
-  /* height: 20px; */
-  
   color: #fff;
   position: relative;
   font-weight: 600;
@@ -314,7 +307,6 @@ hr{
   height: 15px;
   z-index: 0;
   transition: .28s ease;
-  /* border: 1px solid #93959f; */
   border-radius: 50%;
 }
 .radiobtn:checked::after{

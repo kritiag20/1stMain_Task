@@ -57,8 +57,6 @@ export class NoUpperLimit extends Component {
     }
 
     checkChange = (e) => {
-        console.log(e.target.value + " " + e.target.checked);
-        // this.setState({ [e.target.value]: e.target.checked })
         let veg = Vegetable;
 
         veg.forEach(veges => {

@@ -40,7 +40,6 @@ export class FreeAddsOn extends Component {
     }
 
     handleChange = (event) => {
-        // this.setState({ BreadPreparation: event.target.value })
         console.log(event.target.value);
     }
 
@@ -88,37 +87,3 @@ export class FreeAddsOn extends Component {
 }
 
 export default FreeAddsOn
-
-{/* <div>
-    <input type="radio" id="PlainBread" name="bread"
-        onChange={this.handleChange} value="Plain Bread"
-        checked={this.state.bread} />
-    <label htmlFor="PlainBread">Plain Bread</label>
-</div>
-<div>
-    <input type="radio" id="PlainBreadwithCheeseSlice" name="bread"
-        onChange={this.handleChange} value="Plain Bread with Cheese Slice"
-        checked={this.state.bread} />
-    <label htmlFor="PlainBreadwithCheeseSlice">Plain Bread with Cheese Slice</label>
-</div>
-<div>
-    <input type="radio" id="ToastedBread" name="bread"
-        onChange={this.handleChange} value="Toasted Bread"
-        checked={this.state.bread} />
-    <label htmlFor="ToastedBread">Toasted Bread</label>
-</div>
-<div>
-    <input type="radio" id="ToastedBreadWithCheeseSlice" name="bread"
-        onChange={this.handleChange} value="Toasted Bread With Cheese Slice"
-        checked={this.state.bread} />
-    <label htmlFor="ToastedBreadWithCheeseSlice">Toasted Bread With Cheese Slice</label>
-</div>
-<div>
-    <input type="radio" id="ToastedWithMozzarellaCheese" name="bread"
-        onChange={this.handleChange} value="Toasted With Mozzarella Cheese"
-        checked={this.state.bread} />
-    <label htmlFor="ToastedWithMozzarellaCheese">Toasted With Mozzarella Cheese</label>
-</div>
-</div> */}
-{/* <p>Bread For Preparation: {this.state.BreadPreparation}</p> */ }
-{/* <button onClick={this.submit}>Submit</button> */ }
