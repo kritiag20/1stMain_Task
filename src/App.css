@@ -2,22 +2,27 @@
   font-family: ProximaNova,Arial,Helvetica Neue,sans-serif;
   text-transform: capitalize;
 }
-
+.wrapper{
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}
+.subway-wrap{
+  width: 100%;
+}
 .container{
-  width: 100%; 
+  background-color: rgb(17, 141, 81);
+  padding: 50px;
+  height: 170px;
+}
+
+.subway{
+  padding: 0px;
+  margin: auto 29%;
   height: 100%;
 }
-.wrapper{
-  background-color: rgb(17, 141, 81);
-}
-.subway{
-  padding: 50px;
-  height: 20%;
-  width: 600px;
-  margin: auto;
-}
 .subwayHeading{
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 500;
   color: #fff;
 }
@@ -33,7 +38,7 @@
   font-size: 15px;
 }
 .subway-menu{
-  height: 80%;
+  /* height: 80%; */
   width: 600px;
   margin: auto;
 }
@@ -139,14 +144,12 @@
   position: fixed;  
   /* border: 1px solid #ccc; */
   background: #fff;
-  border-radius: 10px;
 }
 .content{
   width: 665px;
   position: relative;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 10px;
 }
 
 /******************Modal Header********************/
@@ -414,4 +417,301 @@ hr{
   height: 8px;
   border-radius: 50%;
   background-color: #60b246;
+}
+
+/* **********Media Queries **************/
+
+/* For Mobile Phone */
+@media only screen and (max-width: 390px) {
+  .subway-wrap{
+    height: 100%;
+  }
+  .container{
+    padding: 0px;
+  }
+  .subway{
+    padding: 30px 30px 40px;
+    margin: auto;
+  }
+  .subwayHeading{
+    font-size: 40px;
+  }
+  .tagline{
+    top: 10px;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+  .subway-menu{
+    width: 100%;
+  }
+  .menu-heading {
+    padding: 40px 30px;
+    font-size: 34px;
+  }
+  .menu-item {
+    width: 80%;
+    display: inline-block;
+    justify-content: left;
+    padding: 10px 30px;
+    height: auto;
+  }
+  .menu-item-detail {
+    width: 100%;
+  }
+  .subway-offer {
+    margin: 10px 0;
+  }
+  .hr{
+    width: 16rem;
+    margin: 0px 0px 15px 30px;
+  }
+  .menu-item-image {
+    width: 100%;
+    display: flex;
+  } 
+  .modalBtn{
+    top: 0px;
+  }
+
+  /* *******************Modal**************** */
+
+  .content-container{
+    position: absolute; 
+    top: 60px;
+  }
+  .content{
+    width: 330px;
+  }
+  .content-header{
+    padding: 10px;
+    height: 130px;
+  }
+  .topHeading {
+    margin-bottom: 8px;
+  }
+  .subName {
+    width: 83%;
+    font-size: 22px;
+    padding-left: 10px;
+    overflow: hidden;
+  }
+  .heading-group {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  .dot {
+  font-size: 11px;
+  color: #000;
+  }
+  .heading-group {
+  padding-top: 0px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 15px;
+  }
+  .content-main {
+    height: 260px;
+  }
+  .main-data {
+    padding: 10px;
+    padding-top: 15px;
+  }
+  .btnText{
+    font-size: 16px;
+  }
+
+}
+
+/* For Tablets */
+@media only screen and (min-width: 391px) and (max-width: 600px) {
+  .subway-wrap{
+    height: 100%;
+  }
+  .container{
+    padding: 25px;
+  }
+  .subway{
+    padding: 20px 30px;
+    margin: auto;
+    height: auto;
+  }
+  .subwayHeading{
+    font-size: 40px;
+  }
+  .tagline{
+    top: 10px;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+  .subway-menu{
+    width: 100%;
+  }
+  .menu-heading {
+    
+    padding: 45px 50px;
+    font-size: 36px;
+
+  }
+  .menu-item {
+    width: 80%;
+    /* display: inline-block; */
+    /* justify-content: left; */
+    padding: 10px 20px;
+    /* height: auto; */
+    margin: 0 30px;
+  }
+  .menu-item-detail {
+    width: 100%;
+  }
+  .subway-offer {
+    margin: 10px 0;
+  }
+  .hr{
+    width: 22rem;
+    margin: 0px 0px 15px 48px;
+  }
+  .menu-item-image {
+    width: 40%;
+  } 
+
+   /* *******************Modal**************** */
+
+   .content-container{
+    position: absolute; 
+    top: 60px;
+  }
+  .content{
+    width: 410px;
+  }
+  .content-header{
+    padding: 15px;
+    height: 128px;
+  }
+  .topHeading {
+    margin-bottom: 8px;
+  }
+  .subName {
+    width: 83%;
+    font-size: 22px;
+    padding-left: 10px;
+    overflow: hidden;
+  }
+  .subheading {
+    display: inline-block;
+  }
+  .dot {
+  font-size: 11px;
+  color: #000;
+  }
+  .heading-group {
+  padding-top: 0px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 15px;
+  }
+  .content-main {
+    height: 260px;
+  }
+  .main-data {
+    padding: 15px;
+    padding-top: 15px;
+  }
+  .btnText{
+    font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 930px) {
+
+  .container{
+    height: 120px;
+    
+  }
+  .subway {
+    padding: 0px;
+    margin: auto 14%;
+    height: 100%;
+  }
+  .menu-item{
+    padding: 20px 0px;
+  }
+  .hr{
+    width: 35rem;
+    margin: -5px 0 15px;
+  }
+
+  /* *******************Modal**************** */
+
+  .content-container{
+    position: absolute; 
+    top: 60px;
+  }
+  .content{
+    width: 490px;
+  }
+  .content-header{
+    padding: 17px;
+    height: 128px;
+  }
+  .topHeading {
+    margin-bottom: 8px;
+  }
+  .subName {
+    width: 83%;
+    font-size: 22px;
+    padding-left: 10px;
+    overflow: hidden;
+  }
+  .subheading {
+    display: inline-block;
+  }
+  .dot {
+  font-size: 11px;
+  color: #000;
+  }
+  .heading-group {
+    padding-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  .content-main {
+    height: 275px;
+  }
+  .main-data {
+    padding: 17px;
+    padding-top: 18px;
+  }
+  .btnText{
+    font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1230px){
+
+  .subway {
+    padding: 0px;
+    margin: auto 23%;
+    height: 100%;
+  }
+   /* *******************Modal**************** */
+
+   .content-container{
+    position: absolute; 
+    top: 60px;
+  }
+  
+  .content-header{
+    padding: 17px;
+    height: 128px;
+  }
+  .topHeading {
+    margin-bottom: 18px;
+}
+
+  .content-main {
+    height: 300px;
+  }
+
 }

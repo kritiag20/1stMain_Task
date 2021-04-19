@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Sub3 from '../Image/Sub3.jpeg'
-import Sub1 from '../Image/Sub1.jpeg'
 import Modal from './Modal'
 
 const menuItem = [
@@ -60,18 +59,20 @@ export class ModalHeader extends Component {
         }
 
         return (
-            <div className="container">
-                <div className="wrapper">
-                    <div className="subway">
-                        <div className="subwayHeading">Subway</div>
-                        <div className="tagline">fast food, healthy food, salads, snacks,desserts, beverages</div>
-                        <div className="tagline">East street, camp</div>
+            <div>
+                <div className="subway-wrap">
+                    <div className="container">
+                        <div className="subway">
+                            <div className="subwayHeading">Subway</div>
+                            <div className="tagline">fast food, healthy food, salads, snacks,desserts, beverages</div>
+                            <div className="tagline">East street, camp</div>
+                        </div>
                     </div>
-                </div>
-                <div className="subway-menu">
-                    <div className="menu-heading">recommended</div>
-                    <div>
-                        {menuItems}
+                    <div className="subway-menu">
+                        <div className="menu-heading">recommended</div>
+                        <div>
+                            {menuItems}
+                        </div>
                     </div>
                 </div>
             </div>
