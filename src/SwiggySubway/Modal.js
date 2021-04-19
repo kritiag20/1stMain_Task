@@ -10,12 +10,12 @@ export class Modal extends Component {
 
     constructor(props) {
         super(props)
-        // const product = this.props.name
         this.state = {
-            prodName :this.props.name,
+            prodName: this.props.name,
             isOpen: false,
             TotalAmt: this.props.price
         }
+        this.openModal = this.openModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
         this.handleAmount = this.handleAmount.bind(this)
     }
@@ -25,22 +25,24 @@ export class Modal extends Component {
         console.log("hello " + amount);
     }
 
-    // openModal() {
-    //     this.setState({ isOpen: true })
-    // }
+    openModal() {
+        this.setState({ isOpen: true })
+    }
     closeModal = () => {
-        this.props.closeModal()
+        this.setState({ isOpen: false })
+
+        // this.props.closeModal()
     }
 
     render() {
 
         return (
             <div>
-                {/* <div>
+                <div>
                     <button className="addBtn" onClick={this.openModal}>ADD + </button>
-                </div> */}
+                </div>
 
-                {/* {this.state.isOpen && ( */}
+                {this.state.isOpen && (
 
                     <div class="modal">
                         <div className="content-container">
@@ -106,7 +108,7 @@ export class Modal extends Component {
                         </div>
 
                     </div>
-                {/* )} */}
+                )}
 
             </div>
         )

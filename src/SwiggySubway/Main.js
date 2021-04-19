@@ -10,14 +10,14 @@ const menuItem = [
         price: 352,
         offer: "buy any two 6inch veg sub & get 2 cookie free",
         image: Sub3
+    },
+    {
+        id: 2,
+        name: "veggie delite sub ( 15 cm, 6 Inch)",
+        price: 143,
+        offer: "Delicious combination of garden fresh lettuce, tomatoes, green peppers, onions, olives and pickles. Served on freshly baked bread. 97% Fat Free.",
+        image: Sub1
     }
-    // {
-    //     id: 2,
-    //     name: "veggie delite sub ( 15 cm, 6 Inch)",
-    //     price: 143,
-    //     offer: "Delicious combination of garden fresh lettuce, tomatoes, green peppers, onions, olives and pickles. Served on freshly baked bread. 97% Fat Free.",
-    //     image: Sub1
-    // }
 ]
 
 export class ModalHeader extends Component {
@@ -26,18 +26,18 @@ export class ModalHeader extends Component {
         super(props)
 
         this.state = {
-            isOpen: false
+            // isOpen: false
         }
-        this.openModal = this.openModal.bind(this)
-        this.closeModal = this.closeModal.bind(this)
+        // this.openModal = this.openModal.bind(this)
+        // this.closeModal = this.closeModal.bind(this)
     }
 
-    openModal() {
-        this.setState({ isOpen: true })
-    }
-    closeModal() {
-        this.setState({ isOpen: false })
-    }
+    // openModal() {
+    //     this.setState({ isOpen: true })
+    // }
+    // closeModal() {
+    //     this.setState({ isOpen: false })
+    // }
 
     render() {
         let menuItems = []
@@ -67,10 +67,11 @@ export class ModalHeader extends Component {
                                 <img className="sub-images" src={value.image} alt="" />
                             </diV>
                             <div className="modalBtn">
-                                <button className="addBtn" onClick={this.openModal}>ADD + </button>
+                                <Modal name={value.name} price={value.price}/>
+                                {/* <button className="addBtn" onClick={this.openModal}>ADD + </button>
                                 {
                                     this.state.isOpen && <Modal name={value.name} price={value.price} closeModal={this.closeModal} />
-                                }
+                                } */}
                             </div>
                         </div>
 
